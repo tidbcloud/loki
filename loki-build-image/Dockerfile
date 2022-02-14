@@ -29,7 +29,7 @@ RUN GO111MODULE=on go get github.com/drone/drone-cli/drone@1fad337d74ca0ecf42099
 FROM golang:1.15.3 as faillint
 RUN GO111MODULE=on go get github.com/fatih/faillint@v1.5.0
 
-FROM golang:1.15.3-buster
+FROM golang:1.16.10-buster
 RUN apt-get update && \
     apt-get install -qy \
     musl gnupg \
